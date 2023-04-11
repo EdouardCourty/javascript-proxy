@@ -1,0 +1,18 @@
+version: "3.6"
+
+services:
+  proxy:
+    build: .
+    container_name: 'javascript_proxy'
+    ports:
+      - published: $PROXY_HTTP_PORT
+        target: $PROXY_HTTP_PORT
+        protocol: tcp
+      - published: $PROXY_HTTPS_PORT
+        target: $PROXY_HTTPS_PORT
+        protocol: tcp
+
+networks:
+  default:
+    name: 'proxy_network'
+    driver: bridge
