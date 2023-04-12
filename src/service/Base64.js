@@ -6,11 +6,11 @@ class Base64 {
      * @returns {string}
      */
     static decodeBase64(input) {
-        let output = "";
+        let output = '';
         let chr1, chr2, chr3, enc1, enc2, enc3, enc4;
         let i = 0;
 
-        input = input.replace(/[^A-Za-z0-9+/=]/g, "");
+        input = input.replace(/[^A-Za-z0-9+/=]/g, '');
 
         while (i < input.length) {
             enc1 = this.BASE_64.indexOf(input.charAt(i++));

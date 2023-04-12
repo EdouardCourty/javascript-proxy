@@ -1,6 +1,6 @@
 import express from 'express';
 
-import authenticate from '../middleware/Authentication.js';
+import authenticate from '../middleware/ProxyAuthentication.js';
 
 const maxBodySize = process.env.PROXY_MAX_BODY_SIZE || '32mb';
 
