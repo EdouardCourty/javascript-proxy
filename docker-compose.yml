@@ -4,6 +4,8 @@ services:
   proxy:
     build: .
     container_name: 'javascript_proxy'
+    env_file:
+      - .env
     ports:
       - published: $PROXY_HTTP_PORT
         target: $PROXY_HTTP_PORT
