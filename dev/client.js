@@ -26,5 +26,4 @@ axios.get(url, {
 
     console.error(error.response.data);
     console.log(response.status);
-
 });
